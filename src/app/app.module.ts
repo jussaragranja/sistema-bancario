@@ -9,6 +9,8 @@ import { MaterialModule } from './shared/material/material.module';
 import { ListagemClientesComponent } from './components/listagem-clientes/listagem-clientes.component';
 import { CadastroClientesComponent } from './components/cadastro-clientes/cadastro-clientes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ClienteModule } from './shared/cliente/cliente.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ClienteModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

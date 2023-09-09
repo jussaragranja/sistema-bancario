@@ -19,6 +19,7 @@ export class ListagemClientesComponent implements OnInit {
 
   listarClientes() {
     this.clienteService.listar().subscribe(clientesApi => (
+
       this.clientes = clientesApi
     ));
   }
