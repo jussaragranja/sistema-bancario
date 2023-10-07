@@ -1,34 +1,37 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ClienteModule } from './pages/cliente/cliente.module';
 import { MaterialModule } from './shared/material/material.module';
-import { ListagemClientesComponent } from './components/listagem-clientes/listagem-clientes.component';
-import { CadastroClientesComponent } from './components/cadastro-clientes/cadastro-clientes.component';
-import { HttpClientModule } from '@angular/common/http';
-import { ClienteModule } from './shared/cliente/cliente.module';
-import { CommonModule } from '@angular/common';
+import { ContaModule } from './pages/conta/conta.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ListagemClientesComponent,
-    CadastroClientesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
+    MaterialModule,
     ClienteModule,
-    CommonModule
+    ContaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+function provideNgxMask(): import("@angular/core").Provider {
+  throw new Error('Function not implemented.');
+}
+
